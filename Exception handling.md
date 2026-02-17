@@ -1,4 +1,4 @@
-<p><a target="_blank" href="https://app.eraser.io/workspace/p3SdoRUtLkBYWNGcAC2B" id="edit-in-eraser-github-link"><img alt="Edit in Eraser" src="https://firebasestorage.googleapis.com/v0/b/second-petal-295822.appspot.com/o/images%2Fgithub%2FOpen%20in%20Eraser.svg?alt=media&amp;token=968381c8-a7e7-472a-8ed6-4a6626da5501"></a></p>
+<p><a target="_blank" href="https://app.eraser.io/workspace/uyHCy2KNu9lx1Vw2irFy" id="edit-in-eraser-github-link"><img alt="Edit in Eraser" src="https://firebasestorage.googleapis.com/v0/b/second-petal-295822.appspot.com/o/images%2Fgithub%2FOpen%20in%20Eraser.svg?alt=media&amp;token=968381c8-a7e7-472a-8ed6-4a6626da5501"></a></p>
 
 Here are detailed **study notes** on the topic covered in the video you shared — **“Master Exception Handling in Spring Boot”** (based on search results and the typical content for that topic). ([﻿YouTube](https://www.youtube.com/watch?v=IdHHwZg3v58&utm_source=chatgpt.com))
 
@@ -9,12 +9,12 @@ Here are detailed **study notes** on the topic covered in the video you shared �
 ## 🧠 **1. Why Exception Handling Matters in Spring Boot**
 - Exception handling ensures that your application **gracefully handles errors** rather than crashing or exposing raw stack traces.
 - It allows APIs to return **meaningful HTTP responses** (like 400, 404, 500) instead of generic or confusing messages.
-- Good error handling improves developer experience and increases application robustness. ([﻿YouTube](https://www.youtube.com/watch?v=IdHHwZg3v58&utm_source=chatgpt.com) )
+- Good error handling improves developer experience and increases application robustness. ([﻿YouTube](https://www.youtube.com/watch?v=IdHHwZg3v58&utm_source=chatgpt.com)  )
 ---
 
 ## 📌 **2. Default Behavior in Spring Boot**
 - Spring Boot has a built-in fallback error response that returns a **JSON error body** with timestamp, status, error, message, and path if an exception is thrown and not handled.
-- By default, the message may be empty unless configured otherwise. ([﻿GeeksforGeeks](https://www.geeksforgeeks.org/springboot/exception-handling-in-spring-boot/?utm_source=chatgpt.com) )
+- By default, the message may be empty unless configured otherwise. ([﻿GeeksforGeeks](https://www.geeksforgeeks.org/springboot/exception-handling-in-spring-boot/?utm_source=chatgpt.com)  )
 ```json
 {
   "timestamp": "...",
@@ -85,7 +85,7 @@ public class ResourceAlreadyExistsException extends RuntimeException {
 - HTTP status
 - Error message
 - Timestamp
-- Additional context (like path or error code) ([﻿GeeksforGeeks](https://www.geeksforgeeks.org/springboot/exception-handling-in-spring-boot/?utm_source=chatgpt.com) )
+- Additional context (like path or error code) ([﻿GeeksforGeeks](https://www.geeksforgeeks.org/springboot/exception-handling-in-spring-boot/?utm_source=chatgpt.com)  )
 ---
 
 ## 📦 **5. Spring Boot Properties for Error Messages**
@@ -96,14 +96,14 @@ server.error.include-message=always
 server.error.include-stacktrace=never
 ```
 - `**include-message=always**`  ensures your custom exception messages are shown.
-- `**include-stacktrace**`  controls stack trace duration in responses (often disabled in production). ([﻿GeeksforGeeks](https://www.geeksforgeeks.org/springboot/exception-handling-in-spring-boot/?utm_source=chatgpt.com) )
+- `**include-stacktrace**`  controls stack trace duration in responses (often disabled in production). ([﻿GeeksforGeeks](https://www.geeksforgeeks.org/springboot/exception-handling-in-spring-boot/?utm_source=chatgpt.com)  )
 ---
 
 ## 🗂️ **6. Best Practices Summary**
 | Practice | When to Use |
 | ----- | ----- |
 |  | Controller level handling |
-| <p></p><p></p> | App-wide handling |
+|  | App-wide handling |
 |  | Quick status based exceptions |
 | Custom Error Responses | Consistent API feedback |
 | Config properties | Tweak how exception info is shown |
@@ -124,6 +124,4 @@ When using a clean custom handler:
 
 
 
-
-
-<!--- Eraser file: https://app.eraser.io/workspace/p3SdoRUtLkBYWNGcAC2B --->
+<!--- Eraser file: https://app.eraser.io/workspace/uyHCy2KNu9lx1Vw2irFy --->

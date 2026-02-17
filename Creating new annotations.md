@@ -1,7 +1,5 @@
 <p><a target="_blank" href="https://app.eraser.io/workspace/FAaLrVBVA1hGv4d9mFsn" id="edit-in-eraser-github-link"><img alt="Edit in Eraser" src="https://firebasestorage.googleapis.com/v0/b/second-petal-295822.appspot.com/o/images%2Fgithub%2FOpen%20in%20Eraser.svg?alt=media&amp;token=968381c8-a7e7-472a-8ed6-4a6626da5501"></a></p>
 
-
-
 # 1. What Is a Custom Annotation?
 An **annotation** is **metadata** added to:
 
@@ -11,7 +9,6 @@ An **annotation** is **metadata** added to:
 - Parameters
 It does **not execute code by itself**.
 ➡ Someone (compiler, framework, AOP, reflection) **reads and acts on it**.
-
 ---
 
 # 2. Basic Syntax of a Custom Annotation
@@ -51,8 +48,7 @@ Common targets:
 | SOURCE | Compile time only |
 | CLASS | <p>In </p><p> file</p> |
 | RUNTIME | Available via reflection |
-👉 **Spring AOP requires **`**RUNTIME**` 
-
+| 👉 **Spring AOP requires ** |  |
 ---
 
 ### 3.3 Basic Custom Annotation Example
@@ -233,8 +229,7 @@ public @interface Roles {
 |  | Caching |
 |  | Security |
 |  | Async execution |
-➡ All are implemented using **AOP + reflection**
-
+| <p>➡ All are implemented using </p><p>**AOP + reflection**</p> |  |
 ---
 
 # 12. Common Mistakes (Very Important)
@@ -255,8 +250,8 @@ public @interface Roles {
 ---
 
 # Mental Model (One Line)
-> **Annotation = Marker**
-**AOP / Reflection = Brain that reacts to the marker**
+>  **Annotation = Marker**
+**AOP / Reflection = Brain that reacts to the marker** 
 
 ---
 

@@ -1,99 +1,88 @@
-# Collectors
+<p><a target="_blank" href="https://app.eraser.io/workspace/0ESPpfMVk8fSMviWl2aU" id="edit-in-eraser-github-link"><img alt="Edit in Eraser" src="https://firebasestorage.googleapis.com/v0/b/second-petal-295822.appspot.com/o/images%2Fgithub%2FOpen%20in%20Eraser.svg?alt=media&amp;token=968381c8-a7e7-472a-8ed6-4a6626da5501"></a></p>
 
+# Collectors
 ---
 
 # 🔹 1. **Basic Collection**
-
 | Collector | Description | Example |
-| --- | --- | --- |
-| `toList()` | Collect elements into a `List` | `stream.collect(Collectors.toList())` |
-| `toSet()` | Collect elements into a `Set` (removes duplicates) | `stream.collect(Collectors.toSet())` |
-| `toCollection(Supplier)` | Collect into a specific collection (e.g., `TreeSet`) | `stream.collect(Collectors.toCollection(TreeSet::new))` |
-
+| ----- | ----- | ----- |
+|  | Collect elements into a  |  |
+|  | <p>Collect elements into a </p><p> (removes duplicates)</p> |  |
+|  | <p>Collect into a specific collection (e.g., </p><p>)</p> |  |
 ---
 
 # 🔹 2. **Counting / Summarizing**
-
 | Collector | Description | Example |
-| --- | --- | --- |
-| `counting()` | Count number of elements | `stream.collect(Collectors.counting())` |
-| `summingInt(ToIntFunction)` | Sum of int values | `stream.collect(Collectors.summingInt(String::length))` |
-| `summingLong(ToLongFunction)` | Sum of long values | `stream.collect(Collectors.summingLong(Employee::getSalary))` |
-| `summingDouble(ToDoubleFunction)` | Sum of double values | `stream.collect(Collectors.summingDouble(Product::getPrice))` |
-| `averagingInt(ToIntFunction)` | Average of int values | `stream.collect(Collectors.averagingInt(String::length))` |
-| `averagingLong(ToLongFunction)` | Average of long values | `stream.collect(Collectors.averagingLong(Employee::getSalary))` |
-| `averagingDouble(ToDoubleFunction)` | Average of double values | `stream.collect(Collectors.averagingDouble(Product::getPrice))` |
-| `summarizingInt(ToIntFunction)` | Returns `IntSummaryStatistics` (count, sum, min, max, avg) | `stream.collect(Collectors.summarizingInt(String::length))` |
-| `summarizingLong(ToLongFunction)` | Returns `LongSummaryStatistics` | `stream.collect(Collectors.summarizingLong(Employee::getSalary))` |
-| `summarizingDouble(ToDoubleFunction)` | Returns `DoubleSummaryStatistics` | `stream.collect(Collectors.summarizingDouble(Product::getPrice))` |
-
+| ----- | ----- | ----- |
+|  | Count number of elements |  |
+|  | Sum of int values |  |
+|  | Sum of long values |  |
+|  | Sum of double values |  |
+|  | Average of int values |  |
+|  | Average of long values |  |
+|  | Average of double values |  |
+|  | <p>Returns </p><p> (count, sum, min, max, avg)</p> |  |
+|  | Returns  |  |
+|  | Returns  |  |
 ---
 
 # 🔹 3. **Joining Strings**
-
 | Collector | Description | Example |
-| --- | --- | --- |
-| `joining()` | Concatenate strings with no delimiter | `stream.collect(Collectors.joining())` |
-| `joining(CharSequence delimiter)` | Concatenate with delimiter | `stream.collect(Collectors.joining(","))` |
-| `joining(CharSequence delimiter, CharSequence prefix, CharSequence suffix)` | Concatenate with delimiter + prefix/suffix | `stream.collect(Collectors.joining(", ", "[", "]"))` |
-
+| ----- | ----- | ----- |
+|  | Concatenate strings with no delimiter |  |
+|  | Concatenate with delimiter |  |
+|  | Concatenate with delimiter + prefix/suffix |  |
 ---
 
 # 🔹 4. **Grouping & Partitioning**
-
 | Collector | Description | Example |
-| --- | --- | --- |
-| `groupingBy(Function)` | Group elements by a classifier function (key → list of values) | `stream.collect(Collectors.groupingBy(String::length))` |
-| `groupingBy(Function, Collector)` | Group and apply downstream collector | `stream.collect(Collectors.groupingBy(String::length, Collectors.counting()))` |
-| `groupingBy(Function, Supplier, Collector)` | Group with a specific map type | `stream.collect(Collectors.groupingBy(String::length, TreeMap::new, Collectors.toList()))` |
-| `partitioningBy(Predicate)` | Partition into `true` / `false` map | `stream.collect(Collectors.partitioningBy(s -> s.length() > 5))` |
-| `partitioningBy(Predicate, Collector)` | Partition with downstream collector | `stream.collect(Collectors.partitioningBy(s -> s.length() > 5, Collectors.counting()))` |
-
+| ----- | ----- | ----- |
+|  | Group elements by a classifier function (key → list of values) |  |
+|  | Group and apply downstream collector |  |
+|  | Group with a specific map type |  |
+|  | <p>Partition into </p><p> / </p><p> map</p> |  |
+|  | Partition with downstream collector |  |
 ---
 
 # 🔹 5. **Reducing / Mapping**
-
 | Collector | Description | Example |
-| --- | --- | --- |
-| `reducing(BinaryOperator)` | Reduce elements with a binary operator | `stream.collect(Collectors.reducing(Integer::sum))` |
-| `reducing(identity, BinaryOperator)` | Reduce with identity value | `stream.collect(Collectors.reducing(0, Integer::sum))` |
-| `reducing(identity, Function, BinaryOperator)` | Map then reduce | `stream.collect(Collectors.reducing(0, String::length, Integer::sum))` |
-| `mapping(Function, Collector)` | Apply a function then collect downstream | `stream.collect(Collectors.mapping(String::toUpperCase, Collectors.toList()))` |
-
+| ----- | ----- | ----- |
+|  | Reduce elements with a binary operator |  |
+|  | Reduce with identity value |  |
+|  | Map then reduce |  |
+|  | Apply a function then collect downstream |  |
 ---
 
 # 🔹 6. **Min / Max**
-
 | Collector | Description | Example |
-| --- | --- | --- |
-| `minBy(Comparator)` | Find min element using comparator | `stream.collect(Collectors.minBy(String::compareTo))` |
-| `maxBy(Comparator)` | Find max element using comparator | `stream.collect(Collectors.maxBy(String::compareTo))` |
-
+| ----- | ----- | ----- |
+|  | Find min element using comparator |  |
+|  | Find max element using comparator |  |
 ---
 
 # 🔹 7. **Miscellaneous**
-
 | Collector | Description | Example |
-| --- | --- | --- |
-| `toMap(keyMapper, valueMapper)` | Collect into a `Map` | `stream.collect(Collectors.toMap(String::toUpperCase, String::length))` |
-| `toMap(keyMapper, valueMapper, mergeFunction)` | Handle duplicate keys | `stream.collect(Collectors.toMap(String::length, s -> s, (s1, s2) -> s1 + "," + s2))` |
-| `toMap(keyMapper, valueMapper, mergeFunction, mapSupplier)` | Specify map type | `stream.collect(Collectors.toMap(String::length, s -> s, (s1,s2)->s1+","+s2, TreeMap::new))` |
-| `collectingAndThen(Collector, finisher)` | Apply a finisher function after collection | `stream.collect(Collectors.collectingAndThen(Collectors.toList(), list -> Collections.unmodifiableList(list)))` |
-
+| ----- | ----- | ----- |
+|  | Collect into a  |  |
+|  | Handle duplicate keys |  |
+|  | Specify map type |  |
+|  | Apply a finisher function after collection |  |
 ---
 
 # ✅ Summary
-
-- **Collection** → `toList()`, `toSet()`, `toCollection()`
-- **Counting / Summarizing** → `counting()`, `summingX()`, `averagingX()`, `summarizingX()`
-- **Joining** → `joining()`
-- **Grouping / Partitioning** → `groupingBy()`, `partitioningBy()`
-- **Reducing / Mapping** → `reducing()`, `mapping()`
-- **Min / Max** → `minBy()`, `maxBy()`
-- **To Map / Post-processing** → `toMap()`, `collectingAndThen()`
-
+- **Collection** → `toList()` , `toSet()` , `toCollection()` 
+- **Counting / Summarizing** → `counting()` , `summingX()` , `averagingX()` , `summarizingX()` 
+- **Joining** → `joining()` 
+- **Grouping / Partitioning** → `groupingBy()` , `partitioningBy()` 
+- **Reducing / Mapping** → `reducing()` , `mapping()` 
+- **Min / Max** → `minBy()` , `maxBy()` 
+- **To Map / Post-processing** → `toMap()` , `collectingAndThen()` 
 ---
 
 If you want, I can create a **one-page cheat sheet table with all Collectors + examples + return types** that you can **keep handy for interviews**.
 
 Do you want me to do that?
+
+
+
+<!--- Eraser file: https://app.eraser.io/workspace/0ESPpfMVk8fSMviWl2aU --->

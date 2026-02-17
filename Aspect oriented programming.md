@@ -8,7 +8,6 @@ Object-Oriented Programming (OOP) is great for:
 - Inheritance
 - Polymorphism
 But OOP **fails to cleanly handle certain concerns** that appear **across many classes**.
-
 ### Example (without AOP)
 ```java
 public class OrderService {
@@ -74,7 +73,6 @@ A **cross-cutting concern** is functionality that:
 - **Flight** → Business logic
 - **Security check** → Cross-cutting concern
 Every passenger must go through security, regardless of destination.
-
 ---
 
 # 3. Core AOP Concepts (Very Important)
@@ -93,7 +91,7 @@ public class LoggingAspect {
 ```
 Think of it as:
 
-> “A class that defines _what_ and _where_ to apply extra behavior”
+>  “A class that defines _what_ and _where_ to apply extra behavior” 
 
 ---
 
@@ -104,9 +102,8 @@ In Spring AOP:
 
 - Usually a **method execution**
 Examples:
-
-- Calling `placeOrder()` 
-- Returning from `pay()` 
+- Calling `placeOrder()`  
+- Returning from `pay()`  
 - Throwing exception from `refund()` 
 ---
 
@@ -119,7 +116,7 @@ public void serviceMethods() {}
 ```
 Meaning:
 
-> “Apply advice to **all methods in service package**”
+>  “Apply advice to **all methods in service package**” 
 
 ---
 
@@ -211,8 +208,7 @@ Target Object
 | Compile-time | During compilation (AspectJ) |
 | Load-time | During class loading |
 | Runtime | At runtime (Spring AOP) |
-Spring AOP uses **runtime weaving**
-
+| <p>Spring AOP uses </p><p>**runtime weaving**</p> |  |
 ---
 
 # 4. AOP Implementation Approaches in Java
@@ -227,7 +223,6 @@ Best for:
 ✔ Enterprise apps
 ✔ Transaction management
 ✔ Logging, security
-
 ---
 
 ## 4.2 AspectJ
@@ -241,7 +236,6 @@ Best for:
 Best for:
 ✔ Low-level framework work
 ✔ Complex cross-cutting needs
-
 ---
 
 ## 4.3 Spring AOP vs AspectJ
@@ -257,7 +251,7 @@ Best for:
 # 5. How Spring AOP Works Internally
 ### Step-by-step (VERY IMPORTANT)
 1. Spring scans beans
-2. Finds `@Aspect` 
+2. Finds `@Aspect`  
 3. Creates **proxy** for matching beans
 4. Client calls proxy
 5. Proxy executes advice
@@ -366,7 +360,7 @@ Target Method
 
 # 12. Common Interview Questions & Pitfalls
 ### Interview Questions
-- Difference between `@Before`  and `@Around` ?
+- Difference between `@Before`  and `@Around`  ?
 - Why internal method calls don’t trigger AOP?
 - How does `@Transactional`  work internally?
 - Spring AOP vs AspectJ?
@@ -378,7 +372,7 @@ Target Method
 ---
 
 # Final Mental Model (One Line)
-> **AOP = Intercept method execution → apply common logic → proceed with business logic**
+>  **AOP = Intercept method execution → apply common logic → proceed with business logic** 
 
 ---
 
