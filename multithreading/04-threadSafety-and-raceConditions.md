@@ -1,9 +1,6 @@
 <p><a target="_blank" href="https://app.eraser.io/workspace/STSaw9cKrpgqal1E7rWd" id="edit-in-eraser-github-link"><img alt="Edit in Eraser" src="https://firebasestorage.googleapis.com/v0/b/second-petal-295822.appspot.com/o/images%2Fgithub%2FOpen%20in%20Eraser.svg?alt=media&amp;token=968381c8-a7e7-472a-8ed6-4a6626da5501"></a></p>
 
-# Java Concurrency — Detailed Documentation: Thread Safety & Race Conditions
-A complete deep-dive into two of the most fundamental concepts in concurrent programming.
 
----
 
 ## Part 1: Thread Safety
 ---
